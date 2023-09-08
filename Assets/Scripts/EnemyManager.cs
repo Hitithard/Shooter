@@ -30,4 +30,12 @@ public class EnemyManager : MonoBehaviour
             player.GetComponent<PlayerManager>().Hit(damage);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject == player)
+        {
+            Debug.Log("Loving Player !");
+            player.GetComponent<PlayerManager>().Hit(damage);
+        }
+    }
 }

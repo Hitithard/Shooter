@@ -31,9 +31,9 @@ public class WeaponManager : MonoBehaviour
             SetActiveWeapon(2);
 
         // Allow the user to scroll through the weapons
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
 			NextWeapon();
-		if (Input.GetAxis("Mouse ScrollWheel") < 0)
+		if (Input.GetAxis("Mouse ScrollWheel") > 0)
 			PreviousWeapon();
 
 

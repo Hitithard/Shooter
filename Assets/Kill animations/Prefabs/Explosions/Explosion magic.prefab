@@ -5012,10 +5012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7002d2094d5c9764192aa4990f6edcf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 5
+  explosionForce: 12
   explosionRadius: 10
-  shakeCamera: 1
-  cameraShakeViolence: 0.5
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
