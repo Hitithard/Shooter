@@ -20,11 +20,18 @@ public class Health : MonoBehaviour
     //health Bar
     public bool haveHealthBar = false;
     [SerializeField] FloatingHealthBar healthBar;
+    public bool haveShaderArmor = false;
+    [SerializeField] ArmorShaderDisolve armorobject;
+
+
 
     private void Awake()
     {   
         if(haveHealthBar)
         healthBar = GetComponentInChildren<FloatingHealthBar>();
+        if (haveShaderArmor)
+        armorobject = GetComponentInChildren<ArmorShaderDisolve>();
+
     }
 
 
@@ -44,6 +51,8 @@ public class Health : MonoBehaviour
                 healthBar.UpdateMagicBar(magicArmor, maxMagicArmor);
             else
                 healthBar.UpdateMagicBar(0, 1);
+            if (haveShaderArmor)
+                armorobject.SetShaderProperty(armor, maxArmor);
         }
 
     }
@@ -64,16 +73,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            if (haveArmor && armorIsHp == false)
-            {
-                health -= damage * (1 - (armor / maxArmor));
-                armor -= armordamage;
-                if (haveHealthBar && armorIsHp)
-                    healthBar.UpdateHealthBar(armor, maxArmor);
-                if (armor <= 0)
-                    haveArmor = false;
-            }
-            else if (haveArmor && armorIsHp)
+            if (haveArmor && armorIsHp)
             {
                 armor -= armordamage;
                 if (haveHealthBar)
@@ -81,15 +81,29 @@ public class Health : MonoBehaviour
                 if (armor <= 0)
                     Kill();
             }
+            else if (haveArmor && armorIsHp == false)
+            {
+                health -= damage * (1 - (armor / maxArmor));
+                armor -= armordamage;
+                if (haveHealthBar && armorIsHp)
+                    healthBar.UpdateHealthBar(armor, maxArmor);
+                if (armor <= 0)
+                    haveArmor = false;
+                if (health <= 0)
+                    Kill();
+            }
             else
             {
                 health -= damage;
-                if (haveHealthBar)
-                    healthBar.UpdateHealthBar(health, maxHealth);
+                
                 if (health <= 0)
                 Kill();
             }
-                
+            if (haveHealthBar && armorIsHp == false)       //Health bar update if armor is not Hp
+                healthBar.UpdateHealthBar(health, maxHealth);
+            if (haveShaderArmor)     //Disolve shader for armor
+                armorobject.SetShaderProperty(armor, maxArmor);
+
         }   
     }
 
