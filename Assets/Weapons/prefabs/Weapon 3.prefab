@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &622026368342253860
 Transform:
   m_ObjectHideFlags: 0
@@ -30,6 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4094175594938065243}
+  - {fileID: 4996346916860598556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54,9 +55,12 @@ MonoBehaviour:
   recoil: 1
   recoilKickBackMin: 0.1
   recoilKickBackMax: 0.3
-  recoilRotationMin: 0.1
-  recoilRotationMax: 0.25
   recoilRecoveryRate: 8
+  fireSound: {fileID: 8300000, guid: a787ca9896b082e43bfc6b17d3453c26, type: 3}
+  makeMuzzleEffects: 1
+  muzzleEffectsPosition: {fileID: 4996346916860598556}
+  muzzleEffects: {fileID: 8840663196808043371, guid: 488abc12d9d7f384fb0daf7f1aaa368e,
+    type: 3}
 --- !u!1 &986226876937276157
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4094175594938065243
 Transform:
   m_ObjectHideFlags: 0
@@ -171,4 +175,35 @@ Transform:
   - {fileID: 496549011994071111}
   m_Father: {fileID: 622026368342253860}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8468465493102890089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4996346916860598556}
+  m_Layer: 0
+  m_Name: FX_Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4996346916860598556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8468465493102890089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.403, y: -0.187, z: 1.725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 622026368342253860}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

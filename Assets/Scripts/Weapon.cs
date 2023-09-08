@@ -23,6 +23,11 @@ public class Weapon : MonoBehaviour
 
     public AudioClip fireSound;
 
+    // F
+    public bool makeMuzzleEffects = true;
+    public Transform muzzleEffectsPosition;
+    public GameObject muzzleEffects;
+
     void Start()
     {
         if (weaponModel == null)
@@ -33,6 +38,8 @@ public class Weapon : MonoBehaviour
             gameObject.AddComponent(typeof(AudioSource));
         }
 
+        if (muzzleEffectsPosition == null)
+            muzzleEffectsPosition = gameObject.transform;
     }
 
     void Update()
@@ -65,7 +72,19 @@ public class Weapon : MonoBehaviour
         }
         
         GetComponent<AudioSource>().PlayOneShot(fireSound);
+
+        if (makeMuzzleEffects)
+        {
+            GameObject muzfx = muzzleEffects;
+            if (muzfx != null)
+                Instantiate(muzfx, muzzleEffectsPosition.position, muzzleEffectsPosition.rotation);
+        }
     }
+
+   /* private void CreateShootFlash(Vector3 spawnPosition)
+    {
+        World_Sprite worldSprite = World_Sprite.Create(spawnPosition, shootFlashSprite);
+    }*/
     void Recoil()
     {
 

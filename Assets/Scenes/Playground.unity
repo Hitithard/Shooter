@@ -75828,11 +75828,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon 3
       objectReference: {fileID: 0}
-    - target: {fileID: 444656091166845772, guid: c1d6e06d6cb7b8946a841065e490cbcc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 622026368342253860, guid: c1d6e06d6cb7b8946a841065e490cbcc,
         type: 3}
       propertyPath: m_RootOrder
@@ -75888,16 +75883,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4094175594938065244, guid: c1d6e06d6cb7b8946a841065e490cbcc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991033516896121086, guid: c1d6e06d6cb7b8946a841065e490cbcc,
-        type: 3}
-      propertyPath: fireSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a787ca9896b082e43bfc6b17d3453c26, type: 3}
     - target: {fileID: 7991033516896121086, guid: c1d6e06d6cb7b8946a841065e490cbcc,
         type: 3}
       propertyPath: playerCam
@@ -76521,11 +76506,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1538371585283760890, guid: 67b0dc39df2e07a479c4720fb9c5dba9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4688462869681370535, guid: 67b0dc39df2e07a479c4720fb9c5dba9,
         type: 3}
       propertyPath: m_RootOrder
@@ -76581,16 +76561,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5653918798631371731, guid: 67b0dc39df2e07a479c4720fb9c5dba9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8058637669965567025, guid: 67b0dc39df2e07a479c4720fb9c5dba9,
-        type: 3}
-      propertyPath: fireSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 22d1608a0e551a34cb41cd0c4b569632, type: 3}
     - target: {fileID: 8058637669965567025, guid: 67b0dc39df2e07a479c4720fb9c5dba9,
         type: 3}
       propertyPath: playerCam
@@ -79189,11 +79159,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9147614656935307047, guid: 39ac521f7e175384384192a0dc595100,
-        type: 3}
-      propertyPath: fireSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 2595977d45f566443aefa06b6e59b92f, type: 3}
     - target: {fileID: 9147614656935307047, guid: 39ac521f7e175384384192a0dc595100,
         type: 3}
       propertyPath: playerCam
