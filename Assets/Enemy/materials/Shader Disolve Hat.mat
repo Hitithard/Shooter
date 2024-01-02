@@ -58,11 +58,11 @@ Material:
     m_Floats:
     - _Blend: 0
     - _Disolvelvl: 1
-    - _Metallic: 0.39
-    - _NormalStrength: 0
+    - _Metallic: 0.609
+    - _NormalStrength: 0.104
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.59
+    - _Smoothness: 0.294
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
     - _DisolveColor: {r: 0.43195653, g: 0.3053096, b: 0.11986228, a: 1}
